@@ -1,0 +1,193 @@
+:root{
+    --font-family-concert: "Concert One", sans-serif;
+}
+
+body{
+   margin: 0;
+   padding: 0;
+   background: #E8E8E8;
+}
+.formContainer{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.form {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 20px;
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    margin: 0 auto;
+    width: 280px;
+    position: relative;
+  }
+  
+  .title {
+    color: var(--font-color);
+    margin-bottom: 25px;
+    font-family: var(--font-family-concert);
+    font-weight: bold;
+    font-size: 1.7rem;
+    width: 90%;
+  }
+  
+  .title p {
+    color: var(--font-color-sub);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 25px;
+    margin-bottom: -1.8rem;
+  }
+  
+  .input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+    font-family: var(--font-family-concert);
+    font-weight: 500;
+  }
+  
+  .input:focus {
+    border: 2px solid var(--input-focus);
+    font-family: var(--font-family-concert);
+  }
+  
+  .login-with {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .button-log {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    color: var(--font-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+  }
+
+  .buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+  }
+  
+  .button-log:active, .button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+  }
+  
+  .button-confirm {
+    margin: 50px auto 0 auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+    font-family: var(--font-family-concert);
+
+  }
+
+.loader {
+    --ANIMATION-DELAY-MULTIPLIER: 70ms;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: -5rem;
+    left: 17%;
+  }
+  .loader span {
+    padding: 0;
+    margin: 0;
+    letter-spacing: -5rem;
+    animation-delay: 0s;
+    transform: translateY(4rem);
+    animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .loader .l {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+  }
+  .loader .o {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
+  }
+  .loader .a {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
+  }
+  .loader .d {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
+  }
+  .loader .ispan {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
+  }
+  .loader .n {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
+  }
+  .loader .g {
+    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 6);
+  }
+  .letter {
+    width: fit-content;
+    height: 3rem;
+  }
+  .i {
+    margin-inline: 5px;
+  }
+  @keyframes hideAndSeek {
+    0% {
+      transform: translateY(4rem);
+    }
+    100% {
+      transform: translateY(0rem);
+    }
+  }
+  
+  
