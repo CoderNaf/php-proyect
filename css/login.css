@@ -15,12 +15,12 @@ body{
 }
 .form {
     --input-focus: #2d8cf0;
-    --font-color: #323232;
+    --font-color: #afafaf;
     --font-color-sub: #666;
     --bg-color: beige;
-    --main-color: black;
+    --main-color: rgb(17, 17, 17);
     padding: 20px;
-    background: lightblue;
+    background: #323232;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -60,7 +60,7 @@ body{
     box-shadow: 4px 4px var(--main-color);
     font-size: 15px;
     font-weight: 600;
-    color: var(--font-color);
+    color: var(--font-color-sub);
     padding: 5px 10px;
     outline: none;
   }
@@ -117,7 +117,7 @@ body{
   }
   
   .button-confirm {
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
     width: 120px;
     height: 40px;
     border-radius: 5px;
@@ -126,7 +126,7 @@ body{
     box-shadow: 4px 4px var(--main-color);
     font-size: 17px;
     font-weight: 600;
-    color: var(--font-color);
+    color: var(--font-color-sub);
     cursor: pointer;
     font-family: var(--font-family-concert);
 

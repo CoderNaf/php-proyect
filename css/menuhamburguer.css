@@ -1,0 +1,128 @@
+:root{
+  --font-family-concert: "Concert One", sans-serif;
+}
+body{
+  background-color: #e8e8e8;
+}
+menu{
+  display: flex;
+  width: 100%;
+  justify-content: end  ;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  padding-inline:2rem ;
+}
+.menuContent {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 3rem;
+  gap: 1rem;
+  font-family: var(--font-family-concert);
+  width: 200px;
+  justify-content: center;
+  background-color: #e8e8e8;
+  padding: 1rem;
+  border-radius: .7rem;
+  border: solid 2px #212121;
+  box-shadow: 3px 3px 0px #212121;
+}
+.menuContentDisplay {
+  display: flex;
+  animation: endFunction .5s ease-in-out;
+}
+@keyframes endFunction {
+  0%{
+      transform: translateX(90%);
+  }
+  100%{
+      transform: translateX(0%);
+  }
+}
+.menuContent li {
+  list-style: none;
+  cursor: pointer;
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.menuContent li:hover {
+  border-left: solid 3px #212121;
+  padding-left:4px ;
+}
+.menuContent li a{
+  text-decoration: none;
+  color: black;
+  
+}
+.menuContent li img{
+  height: 20px;
+}
+.infoUser{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.infoUser h3{
+  font-family: var(--font-family-concert);
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 50%;
+}
+.photoPerfil{
+  display: inline-block;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+}
+.photoPerfil img{
+  width: 100%;
+}
+.hamburger {
+    height: 100%;
+    width: 35px;
+    transform: 0.2s;
+    position: relative;
+  }
+  .hamburger .checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .line {
+    transition: 0.5s;
+    stroke-width: 6px;
+    stroke: black;
+  }
+  .lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+  }
+  .lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+  }
+  .lineMid {
+    stroke-dasharray: 40 40;
+  }
+  .hamburger .checkbox:checked + svg .line {
+    stroke: crimson;
+  }
+  .hamburger .checkbox:checked + svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(45deg) translate(-7px, -5px);
+  }
+  .hamburger .checkbox:checked + svg .lineMid {
+    stroke-dashoffset: 40;
+  }
+  .hamburger .checkbox:checked + svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(-45deg) translate(-5px, 5px);
+  }
+  

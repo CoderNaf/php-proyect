@@ -1,4 +1,4 @@
 <h2>Footer</h2>
-</div>
+<script src="./js/index.js"></script>
 </body>
 </html>
