@@ -1,12 +1,21 @@
 :root{
     --font-family-concert: "Concert One", sans-serif;
 }
-
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: wrap;
+  padding: 1rem;
+}
+.table-responsive{
+  width: 50%;
+  background-color: #E8E8E8;
+}
 form{
     display: grid;
     place-content: center;
     padding: 1rem;
-    width: 400px;
+    width: 50%;
     gap: 2rem;
 }
 
@@ -15,7 +24,6 @@ form{
     width: 250px;
     font-family: var(--font-family-concert);
     font-weight: 500;
-    margin-top: 5rem;
   }
   
   .brutalist-input {
@@ -252,10 +260,92 @@ form{
     font-weight: 600;
     color: var(--font-color);
     cursor: pointer;
+    font-family: var(--font-family-concert);
   }
   
   .buttonSubmitProyect:active {
     box-shadow: 0px 0px var(--main-color);
     transform: translate(3px, 3px);
   }
+
+.tableItems{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.tableContentItems{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+}
+.tableContentItems td{
+  display: flex;
+  align-items: center;
+}
+
+.containerbuttonDeletre{
+  display: flex;
+  justify-content: center;
+}
   
+.buttonDeleteForm {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.buttonDeleteForm, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.buttonDeleteForm .button__text {
+  transform: translateX(33px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.buttonDeleteForm .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonDeleteForm .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.buttonDeleteForm:hover {
+  background: var(--bg-color);
+}
+
+.buttonDeleteForm:hover .button__text {
+  color: transparent;
+}
+
+.buttonDeleteForm:hover .button__icon {
+  width: 145px;
+  transform: translateX(0);
+}
+
+.buttonDeleteForm:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}

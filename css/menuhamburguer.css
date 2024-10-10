@@ -27,6 +27,7 @@ menu{
   border-radius: .7rem;
   border: solid 2px #212121;
   box-shadow: 3px 3px 0px #212121;
+  z-index: 100;
 }
 .menuContentDisplay {
   display: flex;
@@ -47,10 +48,13 @@ menu{
   display: flex;
   align-items: center;
   gap: .4rem;
+  padding: 2px;
 }
 .menuContent li:hover {
   border-left: solid 3px #212121;
-  padding-left:4px ;
+  border-radius: 5px;
+  padding-left:8px ;
+  background-color: rgb(255, 255, 255);
 }
 .menuContent li a{
   text-decoration: none;

@@ -55,7 +55,7 @@
             </div>
 
             <div class="buttons-container">
-                <button class="button-confirm" type="submit">Register</button>
+                <button class="button-confirm" type="button">Register</button>
                 <button class="button-confirm" type="submit">Let`s go →</button>
             </div>
         </form>
